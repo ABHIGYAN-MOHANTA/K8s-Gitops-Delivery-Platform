@@ -1,0 +1,16 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: task-api-scaler
+spec:
+  scaleTargetRef:
+    name: task-api
+
+  minReplicaCount: 1
+  maxReplicaCount: 10
+
+  triggers:
+  - type: cpu
+    metadata:
+      type: Utilization
+      value: "50"
