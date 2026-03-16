@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: task-api
-        image: docker.io/abhigyanmohanta/task-api:13
+        image: docker.io/abhigyanmohanta/task-api:14
         ports:
         - containerPort: 5000
